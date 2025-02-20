@@ -40,26 +40,26 @@ const subjects = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-mint-50/50 to-white px-6 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-mint-50/50 via-white to-mint-50/30 px-8 py-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
         className="mx-auto max-w-6xl"
       >
-        <div className="mb-12 text-center">
-          <span className="mb-2 inline-block rounded-full bg-mint-100 px-3 py-1 text-sm font-medium text-mint-700">
+        <div className="mb-16 text-center">
+          <span className="mb-3 inline-block rounded-full bg-mint-100/80 px-4 py-1.5 text-sm font-medium text-mint-700 backdrop-blur-sm">
             O-Level Resources
           </span>
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Your Gateway to Academic Excellence
+          <h1 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Your Gateway to<br />Academic Excellence
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-600">
+          <p className="mx-auto max-w-2xl text-xl leading-relaxed text-gray-600">
             Access comprehensive study materials, past papers, and recommended books for O-Level subjects.
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {subjects.map((subject) => (
             <SubjectCard key={subject.id} subject={subject} />
           ))}
