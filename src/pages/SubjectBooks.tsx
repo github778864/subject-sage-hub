@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Book } from "lucide-react";
@@ -38,7 +37,7 @@ const SubjectBooks = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-mint-50/50 via-white to-mint-50/30 px-8 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-mint-50/50 via-white to-mint-50/30 px-8 py-16 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900/90">
       <div className="mx-auto max-w-4xl">
         <Link
           to={`/subjects/${id}`}
